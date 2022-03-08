@@ -1,11 +1,11 @@
 # This step builds the container image.
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  id: Build Docker Image
+  id: Build
   args:
   - 'build'
   - '-t'
-  - 'gcr.io/$PROJECT_ID/constellationweb:latest'
+  - 'gcr.io/$PROJECT_ID/api-tests:latest'
   - '.'
 
 # The above command runs: docker build -t gcr.io/$PROJECT_ID/constellationweb:latest .
@@ -17,4 +17,4 @@ steps:
   id: Push
   args:
   - 'push'
-  - 'gcr.io/$PROJECT_ID/constellationweb:latest'
+  - 'gcr.io/$PROJECT_ID/api-tests:latest'
