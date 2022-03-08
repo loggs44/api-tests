@@ -1,6 +1,7 @@
 # This step builds the container image.
+steps:
 - name: 'gcr.io/cloud-builders/docker'
-  id: Build
+  id: Build Docker Image
   args:
   - 'build'
   - '-t'
